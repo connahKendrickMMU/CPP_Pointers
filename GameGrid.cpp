@@ -43,7 +43,8 @@ void GameGrid::DrawGrid()
 
 }
 
-void GameGrid::MoveAndPlacePlayer(Player p1, int xDir, int yDir)
+void GameGrid::MoveSymbol(char object, int newX, int newY)
 {
-
+	// this will work for single items, e.g. player, monster cash
+	grid[newX][newY] = object;
 }

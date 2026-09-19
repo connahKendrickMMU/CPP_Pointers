@@ -7,6 +7,10 @@ private:
 	char icon;
 public:
 	Player();
+	void Move(int DirX, int DirY);
+	char Icon();
+	int X(); 
+	int Y();
 
 };
 

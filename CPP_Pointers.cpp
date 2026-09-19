@@ -17,19 +17,33 @@ int main()
     // Main gameplay loop
     while (true)
     {
+        grid->MoveSymbol(p1.Icon(), p1.X(), p1.Y());
+        // redraw our grid
+        grid->DrawGrid();
+
         // check the input
-        switch (inpt->GetInput("Use WASD to escape the maze"))
+        switch (inpt->GetInput("Use WASD to find treasure and escape the maze"))
         {
         case 'a':
         case 'A':
-            
+            p1.Move(0, -1);
+            break;
+        case 'd':
+        case 'D':
+            p1.Move(0, 1);
+            break;
+        case 's':
+        case 'S':
+            p1.Move(1, 0);
+            break;
+        case 'w':
+        case 'W':
+            p1.Move(-1, 0);
+            break;
         default:
             cout << "Unkown input \n";
             break;
         }
-
-        // redraw our grid
-        grid->DrawGrid();
     }
 }
 
