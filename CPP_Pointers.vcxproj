@@ -126,11 +126,13 @@
     <ClCompile Include="CPP_Pointers.cpp" />
     <ClCompile Include="GameGrid.cpp" />
     <ClCompile Include="InputHandler.cpp" />
+    <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameGrid.h" />
     <ClInclude Include="InputHandler.h" />
+    <ClInclude Include="Monster.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

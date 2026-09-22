@@ -8,7 +8,7 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    std::cout << "Find your treasure adventurer! but avoid the monster lurking in the shadows!\n";
     // create the game grid for the player
     GameGrid* grid = new GameGrid(30, 20);
     InputHandler* inpt = new InputHandler();
@@ -44,6 +44,7 @@ int main()
             cout << "Unkown input \n";
             break;
         }
+        std:cout << "Score: " << "" << "\t" << "Lives: " << "\n";
     }
 }
 
