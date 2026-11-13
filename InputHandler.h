@@ -1,13 +1,14 @@
 #pragma once
 #include <string>
 
-using namespace std;
+// no "using namespace std;" in a header, every file that includes this would get it too
+// so we write std:: in full here and put the using in the .cpp instead
 
 class InputHandler
 {
 private:
-	string inpt; 
+	std::string inpt;
 public:
-	char GetInput(string message);
+	char GetInput(std::string message);
 };
 

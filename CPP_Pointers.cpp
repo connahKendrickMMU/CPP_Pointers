@@ -6,11 +6,14 @@
 #include "GameGrid.h"
 #include "InputHandler.h"
 
+// same as the hot and cold game, saves us typing std:: in front of cout
+using namespace std;
+
 int main()
 {
     std::cout << "Find your treasure adventurer! but avoid the monster lurking in the shadows!\n";
     // create the game grid for the player
-    GameGrid* grid = new GameGrid(30, 20);
+    GameGrid* grid = new GameGrid(10, 10);
     InputHandler* inpt = new InputHandler();
     Player p1;
     
@@ -41,13 +44,14 @@ int main()
             p1.Move(-1, 0);
             break;
         default:
-            cout << "Unkown input \n";
+            cout << "Unknown input \n";
             break;
         }
-        std:cout << "Score: " << "" << "\t" << "Lives: " << "\n";
+        // students: this is a placeholder, the treasure and lives challenges fill it in
+        cout << "Score: " << "" << "\t" << "Lives: " << "\n";
     }
 }
 
 
-// things to do 
-// implement a get char at pos function that 
+// things to do
+// the player can walk through walls, in step 3 you add a GetCharAt function to the grid to stop it
